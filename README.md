@@ -1,6 +1,7 @@
 # Cee-Lo
 dice game
 ## ***The Game***
+ ![](https://lh3.googleusercontent.com/proxy/McB7Tfo7uWac9cgyvBUKNiozhGz3M2w17B4qZWIFiJIQ9hyPMNGxG0RjOFmLluzXVRF4rNo0tsH87haspiWNGWE1WHpUJRUxfUUE10ZQBCDBwLjbFTsKnuamWN5GRhNYGg)
 ### Cee-Lo is a back alley dice game best played in a seedy part of town while enjoying a lil' malt liqour. 
 * For simplicity 2 players roll 3 dice.
 * The first player rolls all three dice until one of the following conditions are met:
@@ -25,6 +26,7 @@ To get started we'll need to start a new repo.
 * add an eventlistener to a "roll" button to run a code that will randomly generate a number between 1-6 for each of the three dice. write code that identifies when 2>= of the dice are equal and signal that the remaining dice is the players score and that the turn is over. swapPlayer()
 * set 1,2,3 and 4,5,6 to automantic loose and win respectively 
 * write the conditions that in the event of a tie the bet will double and the players will keep rolling until a winner is determined. 
+* ![](https://c.tenor.com/beTSEyCoetcAAAAM/money-money-money-make-it-rain.gif)
 
 ## CSS
 * style intro page
