@@ -16,7 +16,7 @@ To get started we'll need to start a new repo.
 1. Add in 2 html files/ a javascript file/ and a css file.
 2. In the first html file we will make the intro page to the game.
 3. in the second html file we will define the different game elements.
-4. In our javaScript file we will begin by defining our variables.
+4. In our javaScript file we will define the variables and write the game logic.
 
 ## javaScript 
 * Once we have defined our variables in javaScript we can begin to write the game logic.
