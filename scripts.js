@@ -11,6 +11,9 @@ const levelWinner2 = document.querySelector('.level-winner-p2');
 const newRound = document.getElementById('newRound')
 const rollBox = document.getElementById('player1Roll')
 let isTie = false;
+const tieButton = document.getElementById('tieBreaker')
+const losenums = [1, 2, 3]
+const winnums = [4, 5, 6]
 class player{
     constructor(character){
         this.character = character;
@@ -28,17 +31,17 @@ const resetDice = () => {
     player2.roll = 0;
     playButton.disabled = false;
     playButtonTwo.disabled = false;
+    newRound.disabled = false;
+};
 
-}
 newRound.addEventListener ('click', () => {
     resetDice();
     levelWinner.style.opacity = 0;
     levelWinner2.style.opacity = 0;
-    playButton.disabled = false;
-    playButtonTwo.disabled = false;
+    playButton.disabled == false;
+    playButtonTwo.disabled == false;
     rollBox.innerText ='';
-    isTie  != true;
-
+    isTie  =  false ;
 });
 
 
@@ -60,9 +63,7 @@ const roll = playButton.addEventListener('click', () => {
         player1.roll = player1.roll + die1;
         rollBox.innerText = (`${die1}`);
         playButton.disabled = true; 
-
-
-    }
+    } 
     });
     //player two turn
     playButtonTwo.addEventListener('click', () => {
@@ -90,33 +91,44 @@ const roll = playButton.addEventListener('click', () => {
    
 // compare player score
 const checkScore = () => {
-    if ((player1.roll > player2.roll) && (isTie = false)){
+    if ((player1.roll > player2.roll) && (isTie !== true)){
         player1.playerScore +=1
         player1ScoreBoard.innerText = "$" + player1.playerScore;
         levelWinner.style.opacity = .5;
         
-    } else if ((player1.roll > player2.roll) && (isTie = true)){
+    } else if ((player1.roll > player2.roll) && (isTie == true)){
         player1.playerScore +=2;
         player1ScoreBoard.innerText = "$" + player1.playerScore;
         levelWinner.style.opacity = .5;
+        newRound.style.opacity = 1;
     
-    } else if((player2.roll > player1.roll) && (isTie = false)){
+    } else if((player2.roll > player1.roll) && (isTie !== true)){
         player2.playerScore +=1;
         player2ScoreBoard.innerText = "$" + player2.playerScore;
         levelWinner2.style.opacity = .5;
     
-    } else if ((player2.roll > player1.roll) && (isTie = true)){
+    } else if ((player2.roll > player1.roll) && (isTie == true)){
         player2.playerScore +=2;
         player2ScoreBoard.innerText = "$" + player2.playerScore;
         levelWinner2.style.opacity = .5;
+        newRound.style.opacity = 1;
+
     
     } else if (player1.roll === player2.roll){
-        console.log('push bet doubles');
-        // newRound.disabled = true;
-        isTie = true;
-        resetDice();
+        
+        tieButton.style.opacity = 1;
+        newRound.disabled = true;
+        newRound.style.opacity = 0;
+
 
     };
+    tieButton.addEventListener('click', ()=> {
+        resetDice()
+        isTie = true;
+        tieButton.style.opacity = 0;
+       
+    })
+
 };
 
 
