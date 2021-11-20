@@ -1,0 +1,187 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color:cornsilk;
+    text-align: center;
+}
+.board{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+#d0{
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:coral ;
+    align-items: center;
+}
+#d1{
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:coral;
+    align-items: center;
+
+
+}
+#d2{
+    margin: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:coral;
+    align-items: center;
+
+
+}
+
+#scoreboard{
+    display:inline-flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    align-self: center;
+    height: 50px;
+    width: 150px; 
+    font-size: 20px;
+    border: 2px ;
+    border-radius: 10px;
+} 
+
+
+
+#player1Score{
+    margin-left: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:coral ;
+
+    
+}
+#player2Score{
+    margin-left: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:coral ;
+}
+#playButton{
+    margin: 5px;
+}
+#playButton2{
+    margin: 5px;
+}
+.level-winner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background-color: #111;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 250ms ease;
+    color: blanchedalmond;
+  }
+  .level-winner-p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background-color: #111;
+    text-align: center;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 250ms ease;
+    color: blanchedalmond;
+  }
+  #player1Roll{
+    position: absolute;
+    top:100px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:coral ;
+  }
+  .die {
+    position: relative;
+    margin: 8px;
+    border: solid 3px #aaa;
+    border-radius: 3px;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .dice .dot {
+    position: absolute;
+    background: #000;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-8px, -8px);
+  }
+  
+  .odd-1 {
+    top: 50%;
+    left: 50%;
+  }
+  
+  .even-1,
+  .odd-2 {
+    top: 25%;
+    left: 25%;
+  }
+  
+  .even-2,
+  .odd-3 {
+    top: 75%;
+    left: 75%;
+  }
+  
+  .even-3,
+  .odd-4 {
+    top: 75%;
+    left: 25%;
+  }
+  
+  .even-4,
+  .odd-5 {
+    top: 25%;
+    left: 75%;
+  }
+  
+  .even-5 {
+    top: 50%;
+    left: 75%;
+  }
+  
+  .even-6 {
+    top: 50%;
+    left: 25%;
+  }
+  
