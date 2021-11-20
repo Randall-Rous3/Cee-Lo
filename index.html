@@ -9,23 +9,26 @@
 </head>
 <body>
     <header>CEE-LO</header>
+    <div class ="wholegame">
     <div class = "board" id = "board">
         <div class="die" id = "d0"></div>
         <div class="die" id = "d1"></div>
         <div class="die" id = "d2"></div>
         <button id="newRound">new round</button>
         <button id ="tieBreaker">Tie Breaker</button>
-    </div>
-    <div class="currentRoll">
-        <div id="player1Roll"></div>
-    </div>
-    <div class = "buttons">
+    
+    <section class = "buttons">
         <button id="playButton"> player 1 Roll</button>
         <button id="playButton2"> player 2 Roll</button>
+    </section>
     </div>
     <div class = "bet" id = 'scoreboard'>
             <div id = "player1Score">p1</div>
             <div id ="player2Score">p2</div>
+                <div id="player1Roll">
+                    <span id="p1">p1</span>
+                </div>
+            </div>
         </div>
         <section class="level-winner">
             <h1 class="title --xl-large">player 1 Winner!</h1>
@@ -33,7 +36,7 @@
         <section class="level-winner-p2">
             <h1 class="title --xl-large">player 2 Winner!</h1>
         </section>
-        
+    </div>  
 </body>
 <script src="scripts.js"></script> 
 </html>

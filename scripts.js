@@ -43,7 +43,12 @@ newRound.addEventListener ('click', () => {
     rollBox.innerText ='';
     isTie  =  false ;
 });
-
+tieButton.addEventListener('click', ()=> {
+    resetDice()
+    isTie = true;
+    tieButton.style.opacity = 0;
+    rollBox.innerText ='';
+});
 
 //player one turn 
 const roll = playButton.addEventListener('click', () => {
@@ -119,23 +124,7 @@ const checkScore = () => {
         tieButton.style.opacity = 1;
         newRound.disabled = true;
         newRound.style.opacity = 0;
-
-
-    };
-    tieButton.addEventListener('click', ()=> {
-        resetDice()
-        isTie = true;
-        tieButton.style.opacity = 0;
-       
-    })
+    
+    }
 
 };
-
-
-
-
-    
-    
-
-
-//change player score on score board
