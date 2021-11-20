@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>CEE-LO</title>
 </head>
@@ -16,25 +17,30 @@
         <div class="die" id = "d2"></div>
         <button id="newRound">new round</button>
         <button id ="tieBreaker">Tie Breaker</button>
-    
-    <section class = "buttons">
-        <button id="playButton"> player 1 Roll</button>
-        <button id="playButton2"> player 2 Roll</button>
-    </section>
     </div>
-    <div class = "bet" id = 'scoreboard'>
-            <div id = "player1Score">p1</div>
-            <div id ="player2Score">p2</div>
-                <div id="player1Roll">
-                    <span id="p1">p1</span>
-                </div>
-            </div>
-        </div>
+    
+    <div class = "playerOne">
+        <button id="playButton"> player 1 Roll</button>
+        <div id = "player1Score">p1</div>
+        <section id="player1Roll">
+            <span id="p1">p1</span>
+        </section>
+    </div>
+    <div class = "playerTwo">
+        <button id="playButton2"> player 2 Roll</button>
+        <div id ="player2Score">p2</div>
+        <section id = "player2Roll">
+            <span id = "p2">p2</span>
+        </section>
+    </div>
         <section class="level-winner">
             <h1 class="title --xl-large">player 1 Winner!</h1>
         </section>
         <section class="level-winner-p2">
             <h1 class="title --xl-large">player 2 Winner!</h1>
+        </section>
+        <section class="level-winner-tie">
+            <h1 class="title --xl-large">Tie: bet doubles.</h1>
         </section>
     </div>  
 </body>

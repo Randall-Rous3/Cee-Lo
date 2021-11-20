@@ -8,8 +8,10 @@ const player2ScoreBoard = document.getElementById('player2Score')
 let isGameOver = false 
 const levelWinner = document.querySelector('.level-winner');
 const levelWinner2 = document.querySelector('.level-winner-p2');
+const levelWinnerTie = document.querySelector('.level-winner-tie');
 const newRound = document.getElementById('newRound')
 const rollBox = document.getElementById('player1Roll')
+const rollBox2 = document.getElementById('player2Roll')
 let isTie = false;
 const tieButton = document.getElementById('tieBreaker')
 const losenums = [1, 2, 3]
@@ -41,6 +43,7 @@ newRound.addEventListener ('click', () => {
     playButton.disabled == false;
     playButtonTwo.disabled == false;
     rollBox.innerText ='';
+    rollBox2.innerText ='';
     isTie  =  false ;
 });
 tieButton.addEventListener('click', ()=> {
@@ -48,6 +51,9 @@ tieButton.addEventListener('click', ()=> {
     isTie = true;
     tieButton.style.opacity = 0;
     rollBox.innerText ='';
+    rollBox2.innerText ='';
+    levelWinnerTie.style.opacity = 0;
+
 });
 
 //player one turn 
@@ -78,16 +84,19 @@ const roll = playButton.addEventListener('click', () => {
         
         if (die1 === die2) {
             player2.roll = player2.roll + die3;
+            rollBox2.innerText = (`${die3}`);
             checkScore();
             playButtonTwo.disabled = true; 
 
         } else if (die1 === die3) {
             player2.roll =player2.roll +die2;
+            rollBox2.innerText = (`${die2}`);
             checkScore();
             playButtonTwo.disabled = true; 
 
         } else if (die2 === die3) {
             player2.roll = player2.roll + die1;
+            rollBox2.innerText = (`${die1}`);
             checkScore();
             playButtonTwo.disabled = true; 
 
@@ -124,6 +133,8 @@ const checkScore = () => {
         tieButton.style.opacity = 1;
         newRound.disabled = true;
         newRound.style.opacity = 0;
+        levelWinnerTie.style.opacity =.5;
+        
     
     }
 
