@@ -3,5 +3,7 @@
     src: url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
   }
 body{
-    background-color: chocolate;
+    background-color: white;
+    font-family:'Monoton', cursive;
+    font-size: 50px;
 }
