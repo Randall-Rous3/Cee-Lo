@@ -1,0 +1,9 @@
+@font-face {
+    font-family:'Monoton', cursive; ;
+    src: url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+  }
+body{
+    background-color: white;
+    font-family:'Monoton', cursive;
+    font-size: 30px;
+}
