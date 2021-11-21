@@ -42,8 +42,8 @@ newRound.addEventListener ('click', () => {
     levelWinner2.style.opacity = 0;
     playButton.disabled == false;
     playButtonTwo.disabled == false;
-    rollBox.innerText ='';
-    rollBox2.innerText ='';
+    rollBox.innerText ='p1';
+    rollBox2.innerText ='p2';
     isTie  =  false ;
 });
 tieButton.addEventListener('click', ()=> {
