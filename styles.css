@@ -21,7 +21,7 @@ body {
     text-align: center;
     align-content: baseline;
     font-family:'Monoton', cursive; ;
-    font-size: 50px;
+    font-size: 70px;
 
 }
 
@@ -36,6 +36,8 @@ body {
   "d e e e f"
   "g h h h i";
   align-content: center;
+  position: relative;
+  top:200px
   
 }
 
@@ -44,27 +46,32 @@ body {
  grid-area: e;
  align-items: center;
  justify-content: center;
- border: 7px dotted black;
+ width: 75%;
+ position: relative;
+ left: 100px;
+ padding-left: 50px;
+
   
 }
 
 #d0 {
     text-align: center;
     margin: 5px;
-    height: 50px;
-    width: 50px;
-    font-size: 20px;
+    height: 150px;
+    width: 150px;
+    font-size: 95px;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral ;
     align-items: center;
+    
 }
 
 #d1 {
     margin: 5px;
-    height: 50px;
-    width: 50px;
-    font-size: 20px;
+    height: 150px;
+    width: 150px;
+    font-size: 95px;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral;
@@ -73,9 +80,9 @@ body {
 
 #d2 {
     margin: 5px;
-    height: 50px;
-    width: 50px;
-    font-size: 20px;
+    height: 150px;
+    width: 150px;
+    font-size: 95px;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral;
@@ -84,12 +91,13 @@ body {
 .playerOne{
   grid-area: d;
   margin: 20px;
+  grid-row-start: 1;
 
 }
 .playerTwo{
   grid-area: f;
   margin: 20px;
-  justify-content: center;
+  grid-row-start: -6;
 }
 
 #player1Score{

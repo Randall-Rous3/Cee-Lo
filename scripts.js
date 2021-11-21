@@ -113,18 +113,18 @@ const checkScore = () => {
     } else if ((player1.roll > player2.roll) && (isTie == true)){
         player1.playerScore +=2;
         player1ScoreBoard.innerText = "$" + player1.playerScore;
-        levelWinner.style.opacity = .5;
+        levelWinner.style.opacity = .7;
         newRound.style.opacity = 1;
     
     } else if((player2.roll > player1.roll) && (isTie !== true)){
         player2.playerScore +=1;
         player2ScoreBoard.innerText = "$" + player2.playerScore;
-        levelWinner2.style.opacity = .5;
+        levelWinner2.style.opacity = .7;
     
     } else if ((player2.roll > player1.roll) && (isTie == true)){
         player2.playerScore +=2;
         player2ScoreBoard.innerText = "$" + player2.playerScore;
-        levelWinner2.style.opacity = .5;
+        levelWinner2.style.opacity = .7;
         newRound.style.opacity = 1;
 
     
@@ -133,7 +133,7 @@ const checkScore = () => {
         tieButton.style.opacity = 1;
         newRound.disabled = true;
         newRound.style.opacity = 0;
-        levelWinnerTie.style.opacity =.5;
+        levelWinnerTie.style.opacity =.7;
         
     
     }
