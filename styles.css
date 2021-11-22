@@ -2,26 +2,7 @@
   font-family:'Monoton', cursive; ;
   src: url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 }
-@media (min-width: 576px) {
-  :root {
-    --size-divisor: 2;
-  }
-}
-@media (min-width: 768px) {
-  :root {
-    --size-divisor: 1.5;
-  }
-}
-@media (min-width: 992px) { 
-  :root {
-    --size-divisor: 1;
-  }
-}
-@media (min-width: 1200px) { 
-  :root {
-    --size-divisor: .67;
-  }
-}
+
 html{
   height: 100%;
 }
@@ -50,7 +31,7 @@ body {
   grid-area: game;
   display: inline-flex;
   position: relative;
-  top: 300px;
+  top: 30vh;
 
 
   
@@ -63,20 +44,20 @@ body {
 }
 #newRound{
   border-radius: 50px;
-  height: 50px;
+  height: 5vh;
   font-family: monospace;
 }
 #tieBreaker{
   border-radius: 50px;
-  height: 50px;
+  height: 5vh;
   font-family: monospace;
 }
 #d0 {
     text-align: center;
     margin: 5px;
-    height: 200px;
-    width: 200px;
-    font-size: 120px;
+    height: 20vh;
+    width: 15vw;
+    font-size: 12vh;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral ;
@@ -87,9 +68,9 @@ body {
 #d1 {
     text-align: center;
     margin: 5px;
-    height: 200px;
-    width: 200px;
-    font-size: 120px;
+    height: 20vh;
+    width: 15vw;
+    font-size: 12vh;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral;
@@ -99,9 +80,9 @@ body {
 #d2 {
     text-align: center;
     margin: 5px;
-    height: 200px;
-    width: 200px;
-    font-size: 120px;
+    height: 20vh;
+    width: 15vw;
+    font-size: 12vh;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral;
@@ -110,13 +91,13 @@ body {
 .playerOne{
    grid-area: score; 
    position: relative;
-   top: 300px;
+   top: 30vh;
 
 }
 .playerTwo{
   grid-area: score2;
   position: relative;
-  top: 300px;
+  top: 30vh;
 
 }
 
@@ -124,9 +105,9 @@ body {
     align-items: center;
     text-align: center;
     
-    height: 70px;
-    width: 70px;
-    font-size: 20px;
+    height: 6vh;
+    width: 6vw;
+    font-size: 3vh;
     border: 2px solid black;
     border-radius: 50px;
     background-color:coral ;
@@ -135,9 +116,9 @@ body {
 #player2Score{
     text-align: center;
    
-    height: 70px;
-    width: 70px;
-    font-size: 20px;
+    height: 6vh;
+    width: 6vw;
+    font-size: 3vh;
     border: 2px solid black;
     border-radius: 50px;
     background-color:coral ;
@@ -146,9 +127,9 @@ body {
 #player1Roll{
   margin: 2px;
   text-align: center;
-  height: 70px;
-  width: 70px;
-  font-size: 40px;
+  height: 7vh;
+  width: 7vw;
+  font-size: 5vh;
   border: 2px solid black;
   border-radius: 10px;
   background-color:coral ;
@@ -157,9 +138,9 @@ body {
 #player2Roll{
   margin: 2px;
   text-align: center;
-  height: 70px;
-  width: 70px;
-  font-size: 40px;
+  height: 7vh;
+  width: 7vw;
+  font-size: 5vh;
   border: 2px solid black;
   border-radius: 10px;
   background-color:coral ;
