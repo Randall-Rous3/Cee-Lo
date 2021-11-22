@@ -7,59 +7,56 @@ html{
 }
 
 body {
-    min-height:100%;
-    /* display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: 
-    "a b b b c"
-    "d e e e f"
-    "d e e e f"
-    "d e e e f"
-    "g h h h i"; */
-    background-color:cornsilk;
-    text-align: center;
-    align-content: baseline;
-    font-family:'Monoton', cursive; ;
-    font-size: 70px;
-
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header header header3"
+  "score game score2"
+  "empty empty empty";
+  justify-items:center ;
+  font-family:'Monoton', cursive; ;
+  text-align: center;
 }
-
-.wholegame {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-template-areas: 
-  "a b b b c"
-  "d e e e f"
-  "d e e e f"
-  "d e e e f"
-  "g h h h i";
-  align-content: center;
+.header{
+  grid-area: header;
+  font-size: 100px;
   position: relative;
-  top:200px
-  
+  left: 120px;
+ 
 }
 
 .board { 
- display:flex;
- grid-area: e;
- align-items: center;
- justify-content: center;
- width: 75%;
- position: relative;
- left: 100px;
- padding-left: 50px;
+  grid-area: game;
+  display: inline-flex;
+  position: relative;
+  top: 300px;
+
 
   
 }
-
+.buttons{
+  grid-area: header3;
+  position: relative;
+  top: 200px
+ 
+}
+#newRound{
+  border-radius: 50px;
+  height: 50px;
+  font-family: monospace;
+}
+#tieBreaker{
+  border-radius: 50px;
+  height: 50px;
+  font-family: monospace;
+}
 #d0 {
     text-align: center;
     margin: 5px;
-    height: 150px;
-    width: 150px;
-    font-size: 95px;
+    height: 200px;
+    width: 200px;
+    font-size: 120px;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral ;
@@ -68,10 +65,11 @@ body {
 }
 
 #d1 {
+    text-align: center;
     margin: 5px;
-    height: 150px;
-    width: 150px;
-    font-size: 95px;
+    height: 200px;
+    width: 200px;
+    font-size: 120px;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral;
@@ -79,32 +77,35 @@ body {
 }
 
 #d2 {
+    text-align: center;
     margin: 5px;
-    height: 150px;
-    width: 150px;
-    font-size: 95px;
+    height: 200px;
+    width: 200px;
+    font-size: 120px;
     border: 2px solid black;
     border-radius: 10px;
     background-color:coral;
     align-items: center;
 }
 .playerOne{
-  grid-area: d;
-  margin: 20px;
-  grid-row-start: 1;
+   grid-area: score; 
+   position: relative;
+   top: 300px;
 
 }
 .playerTwo{
-  grid-area: f;
-  margin: 20px;
-  grid-row-start: -6;
+  grid-area: score2;
+  position: relative;
+  top: 300px;
+
 }
 
 #player1Score{
     align-items: center;
-    margin-left: 15px;
-    height: 50px;
-    width: 50px;
+    text-align: center;
+    
+    height: 70px;
+    width: 70px;
     font-size: 20px;
     border: 2px solid black;
     border-radius: 50px;
@@ -113,9 +114,9 @@ body {
 
 #player2Score{
     text-align: center;
-    margin-left: 5px;
-    height: 50px;
-    width: 50px;
+   
+    height: 70px;
+    width: 70px;
     font-size: 20px;
     border: 2px solid black;
     border-radius: 50px;
@@ -123,43 +124,38 @@ body {
 }
 
 #player1Roll{
-  margin-left: 15px;
-  height: 50px;
-  width: 50px;
-  font-size: 20px;
+  margin: 2px;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  font-size: 40px;
   border: 2px solid black;
   border-radius: 10px;
   background-color:coral ;
 }
 
 #player2Roll{
-  height: 50px;
-  width: 50px;
-  font-size: 20px;
+  margin: 2px;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  font-size: 40px;
   border: 2px solid black;
   border-radius: 10px;
   background-color:coral ;
 }
 #p1{
-  position: relative;
-  top: 25px;
-  left: -10px;
-
   font-size: xx-small;
 }
 #p2{
-  position: relative;
-  top: 25px;
-  left: -10px;
-
   font-size: xx-small;
 }
 #playButton{
+  margin: 2px;
   background-color: coral;
   color: white;
-  position: relative;
-  left: -10px;
-  /* margin: 5px; */
+  border-radius: 10px;
+ 
 }
 #playButton:hover{
   background-color: white;
@@ -170,16 +166,18 @@ body {
   color: coral;
 }
 #playButton2{
-  left: -7px;
+  margin:2px;
   background-color: coral;
   color: white;
-  position: relative;
-  margin: 5px;
+  border-radius: 10px;
+  
 }
 .level-winner {
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 50%;
+    width: 50%;
     font-family:'Monoton', cursive; ;
     border-radius: 10px;
     transform: translate(-50%, -50%);
@@ -196,6 +194,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 50%;
+    width: 50%;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     padding: 4rem;
@@ -211,6 +211,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    height: 50%;
+    width: 50%;
     border-radius: 10px;
     transform: translate(-50%, -50%);
     padding: 4rem;
@@ -224,5 +226,5 @@ body {
   }
 #tieBreaker{
   opacity: 0;
-  /* display: none; */
+  /* display: none;
 }

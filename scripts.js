@@ -28,6 +28,10 @@ const player1 = new player('p1')
 const player2 = new player('p2') 
 player2.isPlaying !=true
 
+const newAppear = () => {
+    newRound.style.opacity = 1;
+    
+}
 const resetDice = () => {
     player1.roll = 0;
     player2.roll = 0;
@@ -45,6 +49,7 @@ newRound.addEventListener ('click', () => {
     rollBox.innerText ='p1';
     rollBox2.innerText ='p2';
     isTie  =  false ;
+    newRound.style.opacity = 0;
 });
 tieButton.addEventListener('click', ()=> {
     resetDice()
@@ -55,33 +60,22 @@ tieButton.addEventListener('click', ()=> {
     levelWinnerTie.style.opacity = 0;
 
 });
-const autowin2 = () => {
-    if(isTie !== true){
-        player2.playerScore +=1;
-        levelWinner2.innerText = '4,5,6 Automatic Win!'
-        player2ScoreBoard.innerText = "$" + player2.playerScore;
-        levelWinner2.style.opacity = .7;
-    }else if(isTie == true){
-        player2.playerScore +=2;
-        levelWinner2.innerText = '4,5,6 Automatic Win!'
-        player2ScoreBoard.innerText = "$" + player2.playerScore;
-        levelWinner2.style.opacity = .7;
-        newRound.style.opacity = 1;
-}
-playButtonTwo.disabled = true;
-};
 const autowin = () => {
     if (isTie !== true){
     player1.playerScore +=1
     levelWinner.innerText = '4,5,6 Automatic Win!'
     player1ScoreBoard.innerText = "$" + player1.playerScore;
     levelWinner.style.opacity = .5;
+    newAppear()
+
     } else if (isTie == true){
     player1.playerScore +=2;
     levelWinner.innerText = '4,5,6 Automatic Win!'
     player1ScoreBoard.innerText = "$" + player1.playerScore;
     levelWinner.style.opacity = .7;
     newRound.style.opacity = 1;
+    newAppear()
+
 }
 playButton.disabled = true;
 playButtonTwo.disabled = true;
@@ -92,12 +86,16 @@ const autoloss = () => {
     levelWinner.innerText = '1,2,3 Automatic loss!'
     player1ScoreBoard.innerText = "$" + player1.playerScore;
     levelWinner.style.opacity = .5;
+    newAppear()
+
     } else if (isTie == true){
     player1.playerScore +=2;
     levelWinner.innerText = '1,2,3 Automatic loss!'
     player1ScoreBoard.innerText = "$" + player1.playerScore;
     levelWinner.style.opacity = .7;
     newRound.style.opacity = 1;
+    newAppear()
+
 }
 playButton.disabled = true;
 playButtonTwo.disabled = true;
@@ -108,21 +106,27 @@ const autoloss1 = () => {
     levelWinner.innerText = '1,2,3 Automatic loss!'
     player1ScoreBoard.innerText = "$" + player1.playerScore;
     levelWinner.style.opacity = .5;
+    newAppear()
+
     } else if (isTie == true){
     player2.playerScore +=2;
     levelWinner.innerText = '1,2,3 Automatic loss!'
     player1ScoreBoard.innerText = "$" + player1.playerScore;
     levelWinner.style.opacity = .7;
     newRound.style.opacity = 1;
+    newAppear()
+
 }
 playButton.disabled = true;
 playButtonTwo.disabled = true;
 };
+
 //player one turn 
 const roll = playButton.addEventListener('click', () => {
     const die1 = dice[0].innerText = Math.ceil(Math.random() * 6);
     const die2 = dice[1].innerText = Math.ceil(Math.random() * 6);
     const die3 = dice[2].innerText = Math.ceil(Math.random() * 6);
+    
     if (die1 === die2) {
         player1.roll = player1.roll + die3;
         rollBox.innerText = (`${die3}`);
@@ -136,33 +140,38 @@ const roll = playButton.addEventListener('click', () => {
         player1.roll = player1.roll + die1;
         rollBox.innerText = (`${die1}`);
         playButton.disabled = true; 
-    } else if ((die1 == 1) && (die2 == 2) && (die3 == 3)) {
-        console.log("auto lose");
-    }else if ((die1 == 1) && (die2 == 3) && (die3 == 2)) {
-        console.log("auto lose");
-    }else if ((die1 == 2) && (die2 == 1) && (die3 == 3)) {
-        console.log("auto lose");
-    }else if ((die1 == 2) && (die2 == 3) && (die3 == 1)) {
-        console.log("auto lose");
-    }else if ((die1 == 3) && (die2 == 2) && (die3 == 1)) {
-        console.log("auto lose");
-    }else if ((die1 == 3) && (die2 == 1) && (die3 == 2)) {
-        console.log("auto lose");
-    }else if ((die1 == 4) && (die2 == 5) && (die3 == 6)) {
+    } else if ((die1 === 1) && (die2 === 2) && (die3 === 3)) {
+        autoloss1()
+    }else if ((die1 === 1) && (die2 === 3) && (die3 === 2)) {
+        autoloss1()
+
+    }else if ((die1 === 2) && (die2 === 1) && (die3 === 3)) {
+        autoloss1()
+
+    }else if ((die1 === 2) && (die2 === 3) && (die3 === 1)) {
+        autoloss1()
+
+    }else if ((die1 === 3) && (die2 === 2) && (die3 === 1)) {
+        autoloss1()
+
+    }else if ((die1 === 3) && (die2 === 1) && (die3 === 2)) {
+        autoloss1()
+
+    }else if ((die1 === 4) && (die2 === 5) && (die3 === 6)) {
     autowin()       
        
-}else if ((die1 == 4) && (die2 == 6) && (die3 == 5)) {
+}else if ((die1 === 4) && (die2 === 6) && (die3 === 5)) {
     autowin()       
-}else if ((die1 == 5) && (die2 == 4) && (die3 == 6)) {
+}else if ((die1 === 5) && (die2 === 4) && (die3 === 6)) {
     autowin()       
         
-}else if ((die1 == 5) && (die2 == 6) && (die3 == 4)) {
+}else if ((die1 === 5) && (die2 === 6) && (die3 === 4)) {
     autowin()       
        
-}else if ((die1 == 6) && (die2 == 4) && (die3 == 5)) {
+}else if ((die1 === 6) && (die2 === 4) && (die3 === 5)) {
     autowin()       
         
-}else if ((die1 == 6) && (die2 == 5) && (die3 == 4)) {
+}else if ((die1 === 6) && (die2 === 5) && (die3 === 4)) {
     autowin()       
         
     };
@@ -191,35 +200,41 @@ const roll = playButton.addEventListener('click', () => {
             checkScore();
             playButtonTwo.disabled = true; 
 
-        } else if ((die1 == 1) && (die2 == 2) && (die3 == 3)) {
-            console.log("auto lose");
-        }else if ((die1 == 1) && (die2 == 3) && (die3 == 2)) {
-            console.log("auto lose");
-        }else if ((die1 == 2) && (die2 == 1) && (die3 == 3)) {
-            console.log("auto lose");
-        }else if ((die1 == 2) && (die2 == 3) && (die3 == 1)) {
-            console.log("auto lose");
-        }else if ((die1 == 3) && (die2 == 2) && (die3 == 1)) {
-            console.log("auto lose");
-        }else if ((die1 == 3) && (die2 == 1) && (die3 == 2)) {
-            console.log("auto lose");
-        }else if ((die1 == 4) && (die2 == 5) && (die3 == 6)) {
+        } else if ((die1 === 1) && (die2 === 2) && (die3 === 3)) {
+            autoloss()
+
+        }else if ((die1 === 1) && (die2 === 3) && (die3 === 2)) {
+            autoloss()
+
+        }else if ((die1 === 2) && (die2 === 1) && (die3 === 3)) {
+            autoloss()
+
+        }else if ((die1 === 2) && (die2 === 3) && (die3 === 1)) {
+            autoloss()
+
+        }else if ((die1 === 3) && (die2 === 2)&& (die3 === 1)) {
+            autoloss()
+
+        }else if ((die1 === 3) && (die2 === 1) && (die3 === 2)) {
+            autoloss()
+
+        }else if ((die1 === 4) && (die2 === 5) && (die3 === 6)) {
             autowin2()       
 
-    }else if ((die1 == 4) && (die2 == 6) && (die3 == 5)) {
-        autowin2()       
+         }else if ((die1 === 4) && (die2 === 6) && (die3 === 5)) {
+            autowin2()       
 
-    }else if ((die1 == 5) && (die2 == 4) && (die3 == 6)) {
-        autowin2()       
+         }else if ((die1 === 5) && (die2 === 4) && (die3 === 6)) {
+             autowin2()       
 
-    }else if ((die1 == 5) && (die2 == 6) && (die3 == 4)) {
-        autowin2()       
+        }else if ((die1 === 5) && (die2 === 6) && (die3 === 4)) {
+            autowin2()       
 
-    }else if ((die1 == 6) && (die2 == 4) && (die3 == 5)) {
-        autowin2()       
+        }else if ((die1 === 6) && (die2 === 4) && (die3 === 5)) {
+            autowin2()       
 
-    }else if ((die1 == 6) && (die2 == 5) && (die3 == 4)) {
-    autowin2()       
+        }else if ((die1 === 6) && (die2 === 5) && (die3 === 4)) {
+            autowin2()       
             
     }
 });
@@ -232,23 +247,30 @@ const checkScore = () => {
         player1.playerScore +=1
         player1ScoreBoard.innerText = "$" + player1.playerScore;
         levelWinner.style.opacity = .5;
+        newAppear()
+
         
     } else if ((player1.roll > player2.roll) && (isTie == true)){
         player1.playerScore +=2;
         player1ScoreBoard.innerText = "$" + player1.playerScore;
         levelWinner.style.opacity = .7;
-        newRound.style.opacity = 1;
-    
+        newAppear()
+
+        
     } else if((player2.roll > player1.roll) && (isTie !== true)){
         player2.playerScore +=1;
         player2ScoreBoard.innerText = "$" + player2.playerScore;
         levelWinner2.style.opacity = .7;
+        newAppear()
+
     
     } else if ((player2.roll > player1.roll) && (isTie == true)){
         player2.playerScore +=2;
         player2ScoreBoard.innerText = "$" + player2.playerScore;
         levelWinner2.style.opacity = .7;
         newRound.style.opacity = 1;
+        newAppear()
+
 
     
     } else if (player1.roll === player2.roll){
@@ -257,8 +279,29 @@ const checkScore = () => {
         newRound.disabled = true;
         newRound.style.opacity = 0;
         levelWinnerTie.style.opacity =.7;
+
         
     
     }
 
 };
+const autowin2 = () => {
+    if(isTie !== true){
+        player2.playerScore +=1;
+        levelWinner2.innerText = '4,5,6 Automatic Win!'
+        player2ScoreBoard.innerText = "$" + player2.playerScore;
+        levelWinner2.style.opacity = .7;
+        newAppear()
+
+    }else if(isTie == true){
+        player2.playerScore +=2;
+        levelWinner2.innerText = '4,5,6 Automatic Win!'
+        player2ScoreBoard.innerText = "$" + player2.playerScore;
+        levelWinner2.style.opacity = .7;
+        newRound.style.opacity = 1;
+        newAppear()
+
+}
+playButtonTwo.disabled = true;
+};
+
