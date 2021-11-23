@@ -1,5 +1,5 @@
 # Cee-Lo
-dice game
+Dice Game
 ## ***The Game***
  ![](https://lh3.googleusercontent.com/proxy/McB7Tfo7uWac9cgyvBUKNiozhGz3M2w17B4qZWIFiJIQ9hyPMNGxG0RjOFmLluzXVRF4rNo0tsH87haspiWNGWE1WHpUJRUxfUUE10ZQBCDBwLjbFTsKnuamWN5GRhNYGg)
 ### Cee-Lo is a back alley dice game best played in a seedy part of town while enjoying a lil' malt liqour. 
