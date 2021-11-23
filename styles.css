@@ -12,7 +12,7 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-  "header header header3"
+  "header1 header header3"
   "score game score2"
   "empty empty empty";
   justify-items:center ;
@@ -23,7 +23,7 @@ body {
   grid-area: header;
   font-size: 15vh;
   position: relative;
-  left: 12vh;
+  
  
 }
 
@@ -41,6 +41,11 @@ body {
   position: relative;
   top: 40vh;
  
+}
+.rules{
+  grid-area: header1;
+  border-radius: 50px;
+  height: 4vh;
 }
 #newRound{
   border-radius: 50px;
