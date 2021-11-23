@@ -5,18 +5,16 @@ const playButton = document.getElementById('playButton')
 const playButtonTwo = document.getElementById('playButton2')
 const player1ScoreBoard = document.getElementById('player1Score')
 const player2ScoreBoard = document.getElementById('player2Score')
-let isGameOver = false 
 const levelWinner = document.querySelector('.level-winner');
 const levelWinner2 = document.querySelector('.level-winner-p2');
 const levelWinnerTie = document.querySelector('.level-winner-tie');
+const levelWinnerLose = document.querySelector('.level-winner-lose');
 const newRound = document.getElementById('newRound')
 const rollBox = document.getElementById('player1Roll')
 const rollBox2 = document.getElementById('player2Roll')
-let isTie = false;
 const tieButton = document.getElementById('tieBreaker')
-const losenums = [1, 2, 3]
-const winnums = [4, 5, 6]
-const levelWinnerLose = document.querySelector('.level-winner-lose')
+let isTie = false;
+let isGameOver = false 
 class player{
     constructor(character){
         this.character = character;
