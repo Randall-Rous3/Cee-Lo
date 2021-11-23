@@ -51,6 +51,6 @@ To get started we'll need to fork and clone the repo to your local device.
 * Tie-breaker button
 * Rules button
 
-## save your work
+## Save your work
 * git add/commit/push your work regularly 
 * deploy finished project on surge
