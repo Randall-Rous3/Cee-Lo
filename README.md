@@ -12,7 +12,7 @@ dice game
 * In the event of a "push" (tie) the players will double their bet for each "push" in the currect round until there is a clear winner. 
 
 # ***Getting Started***
-To get started we'll need to start a new repo.
+To get started we'll need to fork and clone the repo to your local device.
 1. Add in 2 html files/ a javascript file/ and a css file.
 2. In the first html file we will make the intro page to the game.
 3. in the second html file we will define the different game elements.
@@ -32,13 +32,19 @@ To get started we'll need to start a new repo.
 * style intro page
 * style the board and dice 
 
-## HTML Elements pg. 1
+## HTML Elements pg. 1:
 * Welcome Message
-* lets play button that anchors to the game HTML page.
+* dice button that anchors to the rules HTML page.
 
-## HTML Elements
+## Rules HTML Elements:
+* Outline rules of the game
+* Dice button that clicks to the gam
+
+## Game HTML Elements:
 * Gameboard
 * Dice
 * Scoreboard
 * Roll Button
-* Bet Button
+* New round button 
+* Tie-breaker button
+* Rules button
