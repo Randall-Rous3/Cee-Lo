@@ -3,6 +3,7 @@
     src: url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
   }
 body{
+    text-align: center;
     background-color: white;
     font-family:'Caveat', cursive;
     font-size: 3vh;
