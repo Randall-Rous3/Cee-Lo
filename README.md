@@ -2,7 +2,7 @@
 Dice Game
 ## ***The Game***
  ![](https://lh3.googleusercontent.com/proxy/McB7Tfo7uWac9cgyvBUKNiozhGz3M2w17B4qZWIFiJIQ9hyPMNGxG0RjOFmLluzXVRF4rNo0tsH87haspiWNGWE1WHpUJRUxfUUE10ZQBCDBwLjbFTsKnuamWN5GRhNYGg)
-### Cee-Lo is a back alley dice game best played in a seedy part of town while enjoying a lil' malt liqour. 
+### Cee-Lo is a back alley dice game best played while enjoying a lil' malt liqour. 
 * For simplicity 2 players roll 3 dice.
 * The first player rolls all three dice until one of the following conditions are met:
     1. 2 dice land on the same number. In which case the value of the 3rd dice is the players score. if all 3 dice land on the same number that is the players score.
