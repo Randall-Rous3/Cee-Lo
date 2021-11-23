@@ -32,15 +32,15 @@ To get started we'll need to fork and clone the repo to your local device.
 * style intro page
 * style the board and dice 
 
-## HTML Elements pg. 1:
+## Landing page HTML elements:
 * Welcome Message
 * dice button that anchors to the rules HTML page.
 
-## Rules HTML Elements:
+## Rules HTML elements:
 * Outline rules of the game
 * Dice button that clicks to the gam
 
-## Game HTML Elements:
+## Game HTML elements:
 * Gameboard
 * Dice
 * Scoreboard
