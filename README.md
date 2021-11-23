@@ -31,6 +31,8 @@ To get started we'll need to fork and clone the repo to your local device.
 ## CSS
 * style intro page
 * style the board and dice 
+* import fonts
+* add any animations or hover elements to taste
 
 ## Landing page HTML elements:
 * Welcome Message
