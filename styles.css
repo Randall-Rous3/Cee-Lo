@@ -58,45 +58,45 @@ body {
   font-family: monospace;
 }
 #d0 {
-    text-align: center;
-    margin: 5px;
-    height: 20vh;
-    width: 15vw;
-    font-size: 12vh;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color:coral ;
-    align-items: center;
+  text-align: center;
+  margin: 5px;
+  height: 20vh;
+  width: 15vw;
+  font-size: 12vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color:coral ;
+  align-items: center;
     
 }
 
 #d1 {
-    text-align: center;
-    margin: 5px;
-    height: 20vh;
-    width: 15vw;
-    font-size: 12vh;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color:coral;
-    align-items: center;
+  text-align: center;
+  margin: 5px;
+  height: 20vh;
+  width: 15vw;
+  font-size: 12vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color:coral;
+  align-items: center;
 }
 
 #d2 {
-    text-align: center;
-    margin: 5px;
-    height: 20vh;
-    width: 15vw;
-    font-size: 12vh;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color:coral;
-    align-items: center;
+  text-align: center;
+  margin: 5px;
+  height: 20vh;
+  width: 15vw;
+  font-size: 12vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color:coral;
+  align-items: center;
 }
 .playerOne{
-   grid-area: score; 
-   position: relative;
-   top: 30vh;
+  grid-area: score; 
+  position: relative;
+  top: 30vh;
 
 }
 .playerTwo{
@@ -107,26 +107,25 @@ body {
 }
 
 #player1Score{
-    align-items: center;
-    text-align: center;
-    
-    height: 6vh;
-    width: 6vw;
-    font-size: 3vh;
-    border: 2px solid black;
-    border-radius: 50px;
-    background-color:coral ;
+  align-items: center;
+  text-align: center;
+  
+  height: 6vh;
+  width: 6vw;
+  font-size: 3vh;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color:coral ;
 }
 
 #player2Score{
-    text-align: center;
-   
-    height: 6vh;
-    width: 6vw;
-    font-size: 3vh;
-    border: 2px solid black;
-    border-radius: 50px;
-    background-color:coral ;
+  text-align: center;
+  height: 6vh;
+  width: 6vw;
+  font-size: 3vh;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color:coral ;
 }
 
 #player1Roll{
@@ -179,73 +178,73 @@ body {
   
 }
 .level-winner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-    font-family:'Monoton', cursive; ;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-    padding: 4rem;
-    background-color: #111;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 250ms ease;
-    color: blanchedalmond;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  font-family:'Monoton', cursive; ;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  background-color: #111;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease;
+  color: blanchedalmond;
+}
   .level-winner-p2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-    padding: 4rem;
-    background-color: #111;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 250ms ease;
-    color: blanchedalmond;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  background-color: #111;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease;
+  color: blanchedalmond;
+}
   .level-winner-tie {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-    padding: 4rem;
-    background-color: #111;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 250ms ease;
-    color: blanchedalmond;
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  background-color: #111;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease;
+  color: blanchedalmond;
+}
   .level-winner-lose {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 50%;
-    width: 50%;
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-    padding: 4rem;
-    background-color: #111;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 250ms ease;
-    color: blanchedalmond;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  width: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  padding: 4rem;
+  background-color: #111;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 250ms ease;
+  color: blanchedalmond;
   }
 #tieBreaker{
   opacity: 0;
